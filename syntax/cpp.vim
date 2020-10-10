@@ -73,6 +73,7 @@ endif
 " The minimum and maximum operators in GNU C++
 syn match cppMinMax "[<>]?"
 
+
 " Default highlighting
 hi def link cppAccess		cppStatement
 hi def link cppCast		cppStatement

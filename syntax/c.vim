@@ -517,10 +517,14 @@ syn match cCustomFunc "\w\+\s*(" contains=cCustomParen
 syn match cCustomFuncDefine "^\w\+\s*(" contains=cCustomParen
 syn match cCustomSymbol "[\{\}\(\)\[\]]"
 syn match cCustomCalcu "[&+\-*/=<>:,;.]"
-syn match cCustomComment "//[[:print:][:tab:]]*$" "contains=ctesttest
-syn match cCustomComment2 "/*[[:print:][:tab:]]{-}*/" "contains=ctesttest
-syn match cCustomComment3 "/*_[[:print:][:tab:]]{-}*/" "contains=ctesttest
+syn match cCustomComment "//[[:print:][:tab:]]*$" 
+syn match cCustomComment2 "\/\*[[:print:][:tab:]]\_.\{-}\*\/" 
+syn match cCustomComment3 "\/\*\*\/" 
+syn keyword cCustomKeyword const static dynamic case try catch switch class default enum 
+syn match cCustomCompileCommand "#[a-zA-Z_][0-9A-Za-z_]\+"
 
+hi def link cCustomKeyword Type
+hi def link cCustomCompileCommand Type
 hi cCustomSymbol gui=NONE cterm=bold ctermfg=yellow
 hi cCustomCalcu gui=NONE cterm=bold ctermfg=yellow
 hi cCustomClass gui=NONE cterm=bold ctermfg=78
