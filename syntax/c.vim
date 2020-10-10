@@ -507,4 +507,25 @@ unlet s:ft
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
+
 " vim: ts=8
+" Highlight Class and Function names
+syn match cCustomParen "(" contains=cParen,cCppParen
+syn match cCustomScope "::"
+syn match cCustomClass "\w\+\s*::" contains=cCustomScope
+syn match cCustomFunc "\w\+\s*(" contains=cCustomParen
+syn match cCustomFuncDefine "^\w\+\s*(" contains=cCustomParen
+syn match cCustomSymbol "[\{\}\(\)\[\]]"
+syn match cCustomCalcu "[&+\-*/=<>:,;.]"
+syn match cCustomComment "//[[:print:][:tab:]]*$" "contains=ctesttest
+syn match cCustomComment2 "/*[[:print:][:tab:]]{-}*/" "contains=ctesttest
+syn match cCustomComment3 "/*_[[:print:][:tab:]]{-}*/" "contains=ctesttest
+
+hi cCustomSymbol gui=NONE cterm=bold ctermfg=yellow
+hi cCustomCalcu gui=NONE cterm=bold ctermfg=yellow
+hi cCustomClass gui=NONE cterm=bold ctermfg=78
+hi cCustomFunc gui=NONE cterm=bold ctermfg=196 "9
+hi cCustomFuncDefine gui=NONE cterm=bold ctermfg=202"9
+hi cCustomComment gui=NONE cterm=bold ctermfg=73 "154
+hi cCustomComment2 gui=NONE cterm=bold ctermfg=73 "154
+hi cCustomComment3 gui=NONE cterm=bold ctermfg=73 "154
