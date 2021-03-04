@@ -528,7 +528,7 @@ hi def link cCustomCompileCommand Type
 hi cCustomSymbol gui=NONE cterm=bold ctermfg=yellow
 hi cCustomCalcu gui=NONE cterm=bold ctermfg=yellow
 hi cCustomClass gui=NONE cterm=bold ctermfg=78
-hi cCustomFunc gui=NONE cterm=bold ctermfg=196 "9
+hi cCustomFunc gui=NONE cterm=bold ctermfg=208 "9
 hi cCustomFuncDefine gui=NONE cterm=bold ctermfg=202"9
 hi cCustomComment gui=NONE cterm=bold ctermfg=73 "154
 hi cCustomComment2 gui=NONE cterm=bold ctermfg=73 "154
